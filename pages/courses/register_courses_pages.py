@@ -20,7 +20,7 @@ class RegisterCoursesPages(BasePage):
     _cvc = "cvc"
     _submit = "//button[@class='zen-subscribe sp-buy btn btn-default btn-lg " \
               "btn-block btn-gtw btn-submit checkout-button dynamic-button']"
-    _enroll_error_message = "//div[@role='alert']/p[@class='dynamic-text']"
+    _enroll_error_message = "//div[@class='alert alert-danger']"
 
     def enterCourse(self, name):
         self.sendKeys(name, self._search_box, locatorType="xpath")
